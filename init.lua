@@ -79,6 +79,7 @@ require("packer").startup(function(use)
   use("posva/vim-vue")       -- Поддержка Vue.js
   use("neoclide/coc.nvim")   -- Автодополнение
 
+  use 'mattn/emmet-vim'      -- Emmet
   -- Автоматическая установка при первом запуске
   if packer_bootstrap then
     require("packer").sync()
