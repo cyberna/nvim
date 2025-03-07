@@ -35,9 +35,6 @@ require("packer").startup(function(use)
   -- Сам Packer
   use("wbthomason/packer.nvim")
 
--- Emmet
--- use 'mattn/emmet-vim'
-
   -- Тема Dracula
   use({
     "Mofiqul/dracula.nvim",
