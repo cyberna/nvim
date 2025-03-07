@@ -11,6 +11,7 @@ vim.opt.termguicolors = true   -- Полноцветный режим
 vim.opt.cursorline = true      -- Подсветка текущей строки
 vim.opt.syntax = "ON"          -- Подсветка синтаксиса
 
+
 -- 2. Установка Packer (менеджер плагинов)
 local ensure_packer = function()
   local fn = vim.fn
@@ -33,6 +34,9 @@ local packer_bootstrap = ensure_packer()
 require("packer").startup(function(use)
   -- Сам Packer
   use("wbthomason/packer.nvim")
+
+-- Emmet
+-- use 'mattn/emmet-vim'
 
   -- Тема Dracula
   use({
@@ -79,7 +83,6 @@ require("packer").startup(function(use)
   use("posva/vim-vue")       -- Поддержка Vue.js
   use("neoclide/coc.nvim")   -- Автодополнение
 
-  use ('mattn/emmet-vim')    -- Emmet
   -- Автоматическая установка при первом запуске
   if packer_bootstrap then
     require("packer").sync()
@@ -97,7 +100,7 @@ vim.filetype.add({
 -- 5. Настройки CoC
 vim.g.coc_global_extensions = {
   'coc-html', 'coc-css', 'coc-tsserver',
-  'coc-pyright', 'coc-json'
+  'coc-pyright', 'coc-json', 'coc-emmet'
 }
 
 -- 6. Настройки Emmet
