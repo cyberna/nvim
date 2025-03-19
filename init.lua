@@ -35,6 +35,9 @@ require("packer").startup(function(use)
   -- Сам Packer
   use("wbthomason/packer.nvim")
 
+-- Emmet
+-- use 'mattn/emmet-vim'
+
   -- Тема Dracula
   use({
     "Mofiqul/dracula.nvim",
@@ -110,3 +113,6 @@ vim.api.nvim_create_autocmd("User", {
     print("✓ Конфиг успешно скомпилирован!")
   end
 })
+
+-- Включение подсветки текущего столбца
+vim.opt.cursorcolumn = true
